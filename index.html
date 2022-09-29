@@ -10,24 +10,25 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
-
     <main>
        <section class="login">
+            
+        <div class="wrapper">
             <img src="./assets/logo.png" class="loginLogo" alt="Logo" >
 
             <h1 class="loginTitle">Fazer Login</h1>
 
             <label class="loginLabel">
-                <span class="spanActive">Nome de usuário</span>
-                <input type="text" name="username" class="username">
+                <span >Nome de usuário</span>
+                <input type="text" name="username" class="input">
             </label>
 
-            <label class="passwordLabel"> 
+            <label class="loginLabel"> 
                 <span>senha</span>
-                <input type="password" name="password" class="password">
+                <input type="password" name="password" class="input">
             </label>
 
-            <div class="LoginIcons">
+            <div class="loginIcons">
                 <button class="iconsButton">
                     <img src="./assets/apple-icon.png">
                 </button>
@@ -43,10 +44,13 @@
             </div>
 
             <label class="labelCheckbox"> 
-                <span>Manter Login ?</span>
                 <input type="checkbox" class="inputCheckbox">
+                <span>Manter Login ?</span>
             </label>
 
+        </div>
+
+        <div class="wrapper">
             <button type="button" class="loginButton" disabled>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                     <path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z"/>
@@ -55,12 +59,9 @@
 
             <a href="#" class="loginLink">Não consegue iniciar sessão ?</a>
             <a href="#" class="loginLink">Criar conta</a>
+        </div>
        </section>
-
-       <section class="Walpaper">
-
-       </section>
+       <section class="wallpaper"></section>
     </main>
-    
 </body>
 </html>

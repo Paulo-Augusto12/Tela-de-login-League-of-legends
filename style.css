@@ -20,10 +20,23 @@
     --red: #CF3C3F;
 }
 
+main{
+    display: flex;
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .login{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     max-width: 500px;
     min-height: 100vh;
@@ -42,9 +55,9 @@
 }
 
 .loginLabel{
-    width: 100%;
     display: block;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .loginLabel span{
@@ -55,9 +68,10 @@
     color: var(--medium-grey);
     margin: 20px;
     cursor: text;
+    transition: all 200ms ease;
 }
 
-.username{
+.input{
     width: 100%;
     background-color: var(--light-grey);
     border: 2px solid rgba(0, 0,0,0);
@@ -69,40 +83,7 @@
     padding: 25px 10px 10px;
 }
 
-.passwordLabel{
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-}
-
-.passwordLabel span{
-    position: absolute;
-    font-size: 0.8em;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--medium-grey);
-    margin: 20px;
-    cursor: text;
-}
-
-.password{
-    width: 100%;
-    background-color: var(--light-grey);
-    border: 2px solid rgba(0, 0,0,0);
-    border-radius: 5px;
-    outline: none;
-    font-size: 0.9em;
-    font-weight: 600;
-    color: var(--deep-grey);
-    padding: 25px 10px 10px;
-}
-
-.username:focus{
-    background-color: var(--whitesmoke);
-    border: 2px solid var(--deep-grey);
-}
-
-.password:focus{
+.input:focus{
     background-color: var(--whitesmoke);
     border: 2px solid var(--deep-grey);
 }
@@ -113,6 +94,123 @@
 
 }
 
+.loginIcons{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.loginIcons img{
+    width: 20px;
+}
+
+.iconsButton{
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+
+}
+
+
+.loginIcons .iconsButton:nth-child(1){
+    background-color: var(--black);
+}
+
+.loginIcons .iconsButton:nth-child(2){
+    background-color: var(--light-grey);
+}
+
+.loginIcons .iconsButton:nth-child(3){
+    background-color: var(--blue);
+}
+
+
+.labelCheckbox{
+    width: 100%;
+    margin: 15px 0px 50px;
+    font-size: 0.9em;
+    font-weight: 500;
+    
+    display: flex;
+    align-items: center;
+}
+
+
+.inputCheckbox{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border-radius: 3px;
+   
+}
+
+.inputCheckbox:checked{
+    background-color: var(--red);
+}
+
+.inputCheckbox:checked::after{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: 3px solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    margin: 2px 6px;
+
+}
+
+.loginButton{
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--red);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+
+.loginButton svg{
+    fill: white;
+}
+
+.loginButton:disabled{
+    cursor: auto;
+    background-color: var(--white);
+    border: 2px solid var(--light-grey);
+}
+
+.loginButton:disabled svg{
+    fill: var(--grey);
+}
+
+.loginLink{
+    font-size: 0.8em;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: var(--medium-grey);
+}
+
+.wallpaper{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    background-image: url('./assets/trist.jpg');
+}
 
 
 
